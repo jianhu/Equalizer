@@ -53,7 +53,7 @@ func findTargetImageSets() -> [ImageSet] {
                 tagetImageSets.append(imageSet)
             }
         }else {
-            try! child.chdir{
+            child.chdir{
                 tagetImageSets.appendContentsOf(findTargetImageSets())
             }
         }
