@@ -28,8 +28,6 @@ struct ImageSet {
                 continue
             }
             if !(fileName.hasPrefix("\(name)@")){
-                print(fileName, "---", name)
-
                 return false
             }
         }
@@ -60,6 +58,28 @@ func findTargetImageSets() -> [ImageSet] {
     }
     
     return tagetImageSets
+}
+
+func findAllImageSets() -> [ImageSet] {
+    
+    var imageSets:[ImageSet] = []
+    let path = Path.current
+    
+    for child in try! path.children() {
+        if(!child.isDirectory){
+            continue
+        }
+        if child.path.hasSuffix(".imageset") {
+            let imageSet = ImageSet(path: child.path, name: child.lastComponentWithoutExtension, content: readContent(Path("\(child.path)/Contents.json")))
+            imageSets.append(imageSet)
+        }else {
+            child.chdir{
+                imageSets.appendContentsOf(findAllImageSets())
+            }
+        }
+    }
+    
+    return imageSets
 }
 
 func readContent(path: Path) -> [String:AnyObject] {

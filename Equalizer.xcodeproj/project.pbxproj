@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E900DEA51D9A17A100BD2619 /* Loner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E900DEA41D9A17A100BD2619 /* Loner.swift */; };
 		E9A0AF491CE7580A00C8A5A7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0AF481CE7580A00C8A5A7 /* main.swift */; };
 		E9A0AF521CE7606E00C8A5A7 /* Equalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0AF511CE7606E00C8A5A7 /* Equalizer.swift */; };
 		E9A0AF541CE7643D00C8A5A7 /* PathKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0AF531CE7643D00C8A5A7 /* PathKit.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E900DEA41D9A17A100BD2619 /* Loner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loner.swift; sourceTree = "<group>"; };
 		E9A0AF451CE7580A00C8A5A7 /* Equalizer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Equalizer; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A0AF481CE7580A00C8A5A7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		E9A0AF511CE7606E00C8A5A7 /* Equalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Equalizer.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				E9A0AF531CE7643D00C8A5A7 /* PathKit.swift */,
 				E9A0AF481CE7580A00C8A5A7 /* main.swift */,
 				E9A0AF511CE7606E00C8A5A7 /* Equalizer.swift */,
+				E900DEA41D9A17A100BD2619 /* Loner.swift */,
 			);
 			path = Equalizer;
 			sourceTree = "<group>";
@@ -127,6 +130,7 @@
 			files = (
 				E9A0AF521CE7606E00C8A5A7 /* Equalizer.swift in Sources */,
 				E9A0AF541CE7643D00C8A5A7 /* PathKit.swift in Sources */,
+				E900DEA51D9A17A100BD2619 /* Loner.swift in Sources */,
 				E9A0AF491CE7580A00C8A5A7 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,7 +223,7 @@
 		E9A0AF4D1CE7580A00C8A5A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = /Users/jh/Downloads/Resources;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -250,6 +254,7 @@
 				E9A0AF4E1CE7580A00C8A5A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
